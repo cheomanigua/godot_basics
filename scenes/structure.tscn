@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3xssqklksun1"]
+
+[ext_resource type="Script" path="res://scripts/structure.gd" id="1_lcikh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oojj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rkco4"]
+size = Vector2(18, 18)
+
+[node name="Structure" type="Area2D"]
+script = ExtResource("1_lcikh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oojj7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_rkco4")
